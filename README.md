@@ -27,7 +27,7 @@ Ce projet est un **bot de publication automatique sur LinkedIn** qui extrait des
 1. Clonez ce dépôt GitHub sur votre machine locale :
 
    ```bash
-   git clone https://github.com/votre-utilisateur/votre-repo.git
+   git clone https://github.com/Nassim-Abid/Bot-de-publication-automatique-sur-LinkedIn.git
    cd votre-repo
    ```
 2. Installez les dépendances nécessaires :
