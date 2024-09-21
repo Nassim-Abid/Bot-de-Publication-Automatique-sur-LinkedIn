@@ -1,91 +1,79 @@
-# 🚀 Bot de Publication Automatique sur LinkedIn
+# 🚀 Automatic Posting Bot on LinkedIn
 
-Ce projet est un **bot de publication automatique sur LinkedIn** qui extrait des articles technologiques en temps réel à partir de l'API de NewsAPI.org, et les publie automatiquement sur votre profil LinkedIn. Le bot est conçu pour gérer les autorisations OAuth2, télécharger des images associées aux articles, et préparer des posts de manière dynamique, tout en évitant les duplications.
+This project is an automatic posting bot on LinkedIn that extracts real-time technology articles from the NewsAPI.org API and automatically posts them on your LinkedIn profile. The bot is designed to handle OAuth2 authorizations, download images associated with the articles, and prepare posts dynamically while avoiding duplications.
 
----
-
-## 📚 Fonctionnalités
-
-- Extraction d'articles technologiques en temps réel via l'API [NewsAPI.org](https://newsapi.org/).
-- Publication automatique d'articles sur votre **profil LinkedIn**.
-- Gestion des images associées aux articles.
-- Evite les duplications d'articles déjà publiés.
-- Intervalle de publication configurable.
+# 📚 Features
+- Real-time extraction of technology articles via the [NewsAPI.org](https://newsapi.org/).
+- Automatic posting of articles on your LinkedIn profile.
+- Management of images associated with the articles.
+- Avoids duplication of already published articles.
+- Configurable posting interval.
 
 ---
 
-## 🛠️ Installation
+# 🛠️ Installation 
+## Prerequisites
+- Python 3.7+
+- A LinkedIn Developer account
+- API keys for NewsAPI.org
 
-### Pré-requis
-
-- **Python 3.7+**
-- Un compte [LinkedIn Developer](https://www.linkedin.com/developers/)
-- Clés API pour [NewsAPI.org](https://newsapi.org/)
-
-### Étapes d'installation
-
-1. Clonez ce dépôt GitHub sur votre machine locale :
-
-   ```bash
-   git clone https://github.com/Nassim-Abid/Bot-de-publication-automatique-sur-LinkedIn.git
-   cd votre-repo
+## Installation Steps
+1. Clone this GitHub repository to your local machine:
    ```
-2. Installez les dépendances nécessaires :
+   git clone https://github.com/Nassim-Abid/Bot-de-Publication-Automatique-sur-LinkedIn.git
+   cd Bot-de-Publication-Automatique-sur-LinkedIn
+   ```
+1. Install the necessary dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Créez un fichier ```.env``` à la racine de votre projet avec les informations suivantes :
+2. Create a .env file at the root of your project with the following information:
    ```
-   # Fichier .env
-   CLIENT_ID=VotreClientID
-   CLIENT_SECRET=VotreClientSecret
+   .env file
+   CLIENT_ID=YourClientID
+   CLIENT_SECRET=YourClientSecret
    REDIRECT_URI=http://localhost:8000/code
-   NEWS_API_KEY=VotreNewsAPIKey
+   NEWS_API_KEY=YourNewsAPIKey
    ```
-4. Si vous avez un fichier de configuration local, créez un fichier .env.local pour écraser les valeurs de .env si nécessaire.
+3. If you have a local configuration file, create a .env.local file to override the values in .env if necessary.
    ```
-   # Fichier .env.local
-   CLIENT_ID=VotreClientIDLocal
-   CLIENT_SECRET=VotreClientSecretLocal
+   .env.local file
+   CLIENT_ID=YourLocalClientID
+   CLIENT_SECRET=YourLocalClientSecret
    ```
-5. Exécutez le bot :
+4. Run the bot:
    ```bash
    python main.py
    ```
-## ⚙️ Utilisation
-### Configuration OAuth2
-Pour publier sur LinkedIn, vous devez configurer OAuth2 pour obtenir un token d'accès.
+# ⚙️ UsageOAuth2 Configuration
+To post on LinkedIn, you need to configure OAuth2 to obtain an access token.
 
-Rendez-vous sur l'URL d'autorisation générée dans le terminal.
-Connectez-vous avec votre compte LinkedIn et copiez le code d'autorisation.
-Collez ce code dans le terminal lorsque le programme vous le demande.
-Le bot se charge ensuite de récupérer automatiquement les articles et de les publier à intervalles réguliers.
-
-### Exemples
-Si vous souhaitez tester avec des intervalles courts (ex : toutes les 5 minutes), modifiez l'intervalle dans le code :
+1. Go to the authorization URL generated in the terminal.
+2. Log in with your LinkedIn account and copy the authorization code.
+3. Paste this code into the terminal when prompted by the program.
+4. The bot will then automatically retrieve articles and post them at regular intervals. 
+### Examples
+If you want to test with short intervals (e.g., every 5 minutes), modify the interval in the code:
    ```
-   intervalle = 60 * 5  # 5 minutes
+   interval = 60 * 5  # 5 minutes
    ```
-Pour un intervalle quotidien (ex : toutes les 24 heures) :
+For a daily interval (e.g., every 24 hours):
    ```
-   intervalle = 60 * 60 * 24  # 24 heures
+   interval = 60 * 60 * 24  # 24 hours
    ```
-## 🐛 Dépannage
-### Problème courant : Erreur 403 lors de la publication
-- Vérifiez que vous avez bien les permissions nécessaires via l'API LinkedIn.
-- Assurez-vous que votre jeton d'accès n'a pas expiré.
-- Confirmez que vous utilisez la **bonne URN** pour publier sur un profil personnel et non une page organisationnelle.
-
-## 🤝 Contribution
-Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce projet, suivez les étapes suivantes :
-
-1. **Fork** le projet.
-2. Créez une nouvelle branche : git checkout -b feature-nouvelle-fonctionnalite.
-3. Faites vos modifications.
-4. Soumettez une **Pull Request.**
-
-## 📄 License
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus d'informations.
-
-## 📧 Contact
-Si vous avez des questions ou souhaitez collaborer, n'hésitez pas à me contacter à l'adresse : [nassimabiddz@gmail.com](mailto:nassimabiddz@gmail.com).
+# 🐛 Troubleshooting 
+### Common Issue: 403 Error When Posting
+- Check that you have the necessary permissions via the LinkedIn API.
+- Ensure your access token has not expired.
+- Confirm you are using the correct URN to post on a personal profile and not an organizational page.
+# 🤝 Contribution
+Contributions are welcome! If you want to improve this project, follow these steps:
+- **Fork** the project.
+- Create a new branch: git checkout -b feature-new-feature.
+- Make your changes.
+- Submit a **Pull Request**.
+# 📄 License
+This project is licensed under the MIT License. See the LICENSE file for more information.
+# 📧 Contact 
+If you have any questions or want to collaborate, feel free to contact me at: [nassimabiddz@gmail.com](mailto:nassimabiddz@gmail.com).
+Let me know if you need any further assistance!
